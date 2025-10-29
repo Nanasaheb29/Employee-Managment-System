@@ -55,7 +55,7 @@ function EmployeeDashboard() {
                   <tr
                     key={emp.id}
                     className={`${
-                      index % 2 === 0 ? "bg-gray-50" : "bg-white"
+                      index % 2 === 0 ? "bg-gray-60" : "bg-white"
                     } hover:bg-blue-50 transition`}
                   >
                     <td className="py-3 px-4">{index + 1}</td>
