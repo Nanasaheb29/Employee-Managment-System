@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
   const [register, setRegister] = useState({
@@ -7,6 +8,8 @@ function Register() {
     email: "",
     password: "",
   });
+
+  const nevigate = useNavigate();
 
   const inputHandler = (e) => {
     const { name, value } = e.target;
@@ -25,6 +28,9 @@ function Register() {
       .then((response) => {
         if (response.data) {
           alert("Registered successfully!");
+
+          nevigate('/login');
+
         } else {
           alert("User already exists!");
         }
