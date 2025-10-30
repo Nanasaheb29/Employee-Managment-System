@@ -1,7 +1,7 @@
-import axios from "axios";
+import axios, { Axios } from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function UserProfile() {
   const { id } = useParams();
@@ -18,16 +18,30 @@ function UserProfile() {
     setupdateemployee((old) => ({ ...old, [name]: value }));
   };
 
+
+  const nevigate = useNavigate();
+
   useEffect(() => {
     axios
       .get(`http://localhost:8080/getById?id=${id}`)
       .then((response) => setupdateemployee(response.data))
       .catch((error) => alert(error.massage || "somthing went wrong"));
-  }, []);
+  }, [id]);
 
+  const UpdateUser = (e) => {
+    e.preventDefault(); // prevent form reload
+    axios
+      .put("http://localhost:8080/update", updateemployee)
+      .then((response) => {
+        alert("User updated successfully!");
+        setupdateemployee(response.data);
+        nevigate('/dashboard')
+      })
+      .catch((error) => alert(error.message || "Something went wrong"));
+  };
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-50">
-      <form className="bg-white shadow-lg rounded-2xl px-8 pt-10 pb-8 w-full max-w-md border border-gray-200">
+      <form onSubmit={UpdateUser} className="bg-white shadow-lg rounded-2xl px-8 pt-10 pb-8 w-full max-w-md border border-gray-200">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
           Create Account
         </h2>
