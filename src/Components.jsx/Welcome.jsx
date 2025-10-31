@@ -16,7 +16,7 @@ function Welcome() {
         </p>
 
         <img
-          src="/src/assets/ZguYz8t2UUcvBUhF_Employeemanagement.avif"
+          src="/public/ZguYz8t2UUcvBUhF_Employeemanagement.avif"
           alt="Employee Management"
           className="w-full max-w-3xl rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
         />

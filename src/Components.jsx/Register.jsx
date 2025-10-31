@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 function Register() {
   const [register, setRegister] = useState({
+    id:0,
     name: "",
     email: "",
     password: "",
@@ -21,6 +22,7 @@ function Register() {
 
     axios
       .post("http://localhost:8080/register", {
+        id:register.id,
         name: register.name,
         email: register.email,
         password: register.password,
@@ -47,6 +49,19 @@ function Register() {
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
           Create Account
         </h2>
+
+
+        {/* id Field */}
+        <div className="mb-5">
+          <label className="block text-gray-700 font-medium mb-2">ID</label>
+          <input
+            type="number"
+            name="id"
+            onChange={inputHandler}
+            placeholder="Enter your id"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+          />
+        </div>
 
         {/* Name Field */}
         <div className="mb-5">
