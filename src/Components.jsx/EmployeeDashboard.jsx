@@ -7,7 +7,7 @@ function EmployeeDashboard() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/getAll")
+      .get("https://employee-curd-3.onrender.com/getAll")
       .then((response) => setEmployee(response.data))
       .catch((error) => alert(error.message || "Something went wrong!"));
   }, []);
@@ -20,7 +20,7 @@ function EmployeeDashboard() {
 
   const DeleteUser = (id) => {
     axios
-      .delete(`http://localhost:8080/delete?id=${id}`)
+      .delete(`https://employee-curd-3.onrender.com/delete?id=${id}`)
       .then((response) => {
         if (response.data === true) {
           alert("Deleter !");

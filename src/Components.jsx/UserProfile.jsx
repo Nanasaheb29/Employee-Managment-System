@@ -23,7 +23,7 @@ function UserProfile() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/getById?id=${id}`)
+      .get(`https://employee-curd-3.onrender.com/getById?id=${id}`)
       .then((response) => setupdateemployee(response.data))
       .catch((error) => alert(error.massage || "somthing went wrong"));
   }, [id]);
@@ -31,7 +31,7 @@ function UserProfile() {
   const UpdateUser = (e) => {
     e.preventDefault(); // prevent form reload
     axios
-      .put("http://localhost:8080/update", updateemployee)
+      .put("https://employee-curd-3.onrender.com/update", updateemployee)
       .then((response) => {
         alert("User updated successfully!");
         setupdateemployee(response.data);

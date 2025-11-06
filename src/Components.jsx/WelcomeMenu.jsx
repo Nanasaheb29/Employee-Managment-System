@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function WelcomeMenu() {
   return (
@@ -7,19 +8,19 @@ function WelcomeMenu() {
         Employee
       </h1>{" "}
       <nav className="space-x-6 text-lg font-semibold">
-        <a
+        <Link
           href="/login"
           className="text-blue-600 hover:text-blue-800 transition-colors duration-200"
         >
           Login
-        </a>
+        </Link>
         <span className="text-gray-400">|</span>
-        <a
+        <Link
           href="/register"
           className="text-green-600 hover:text-green-800 transition-colors duration-200"
         >
           Register
-        </a>
+        </Link>
       </nav>
     </div>
   );

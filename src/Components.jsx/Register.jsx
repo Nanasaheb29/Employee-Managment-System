@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Register() {
   const [register, setRegister] = useState({
@@ -21,7 +21,7 @@ function Register() {
     e.preventDefault();
 
     axios
-      .post("http://localhost:8080/register", {
+      .post("https://employee-curd-3.onrender.com/register", {
         id:register.id,
         name: register.name,
         email: register.email,
@@ -111,12 +111,12 @@ function Register() {
 
         <p className="text-center text-sm text-gray-600 mt-4">
           Already have an account?{" "}
-          <a
+          <Link
             href="/login"
             className="text-green-600 hover:text-green-800 font-medium"
           >
             Login here
-          </a>
+          </Link>
         </p>
       </form>
     </div>
