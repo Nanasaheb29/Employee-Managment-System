@@ -9,7 +9,7 @@ function WelcomeMenu() {
       </h1>{" "}
       <nav className="space-x-6 text-lg font-semibold">
         <Link
-          href="/Login"
+          href="/login"
           className="text-blue-600 hover:text-blue-800 transition-colors duration-200"
         >
           Login
