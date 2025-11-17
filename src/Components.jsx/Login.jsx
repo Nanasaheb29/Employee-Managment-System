@@ -61,7 +61,7 @@ function Login() {
         {/* Password Field */}
         <div className="mb-6">
           <label className="block text-gray-700 font-medium mb-2">
-            Password
+            Password 
           </label>
           <input
             type="password"
@@ -73,7 +73,6 @@ function Login() {
           />
         </div>
 
-        {/* Submit Button */}
         <button
           type="submit"
           className="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition duration-200"

@@ -6,7 +6,7 @@ function Footer() {
       <p className="text-gray-600 text-sm">
         © {new Date().getFullYear()} MyWebsite. All rights reserved.
       </p>
-    </footer>
+    </footer> 
   )
 }
 
