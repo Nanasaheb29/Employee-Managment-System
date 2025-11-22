@@ -6,7 +6,7 @@ function EmployeeDashboard() {
   const [employee, setEmployee] = useState([]);
 
   useEffect(() => {
-    axios
+    axios 
       .get("https://employee-curd-3.onrender.com/getAll")
       .then((response) => setEmployee(response.data))
       .catch((error) => alert(error.message || "Something went wrong!"));

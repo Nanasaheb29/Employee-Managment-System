@@ -6,7 +6,7 @@ import Register from "./Components.jsx/Register";
 import EmployeeDashboard from "./Components.jsx/EmployeeDashboard";
 import UserProfile from "./Components.jsx/UserProfile";
 
-function App() {
+function App() { 
   return (
     <>
       <Routes>

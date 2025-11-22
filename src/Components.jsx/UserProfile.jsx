@@ -48,7 +48,7 @@ function UserProfile() {
 
         <div className="mb-5">
           <label className="block text-gray-700 font-medium mb-2">ID</label>
-          <input
+          <input 
             type="number"
             name="id"
             readOnly
